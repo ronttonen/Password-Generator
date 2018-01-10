@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ronttonenrotomoottori.strongpasswordgeneratorfree.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/upperCaseCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upper Case"
+                android:onClick="checkBoxFunction"
+                android:checked="true"
+                android:gravity="center"/>
+
+            <CheckBox
+                android:id="@+id/lowerCaseCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="checkBoxFunction"
+                android:text="Lower Case"
+                android:checked="true"
+                android:gravity="center"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/numbersCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="checkBoxFunction"
+                android:text="Numbers"
+                android:checked="true"
+                android:gravity="center"/>
+
+            <CheckBox
+                android:id="@+id/specialCharactersCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Symbols"
+                android:onClick="checkBoxFunction"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:checked="true"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="Length:"
+                android:layout_marginLeft="6dp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/lengthField"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:textColor="#000"
+                android:inputType="number"
+                android:gravity="center"
+                android:text="20" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <Button
+                    android:id="@+id/lessLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="25dp"
+                    android:minWidth="33dp"
+                    android:text="-"
+                    android:layout_marginRight="5dp"
+                    android:onClick="changeLength"/>
+
+                <Button
+                    android:id="@+id/moreLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:minHeight="25dp"
+                    android:minWidth="25dp"
+
+                    android:onClick="changeLength"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/generateButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate"
+                android:onClick="generatePassword"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy to clipboard"
+            android:onClick="copyPasswordToClipBoard"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3555097125550655/9417455173">
+            </com.google.android.gms.ads.AdView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
